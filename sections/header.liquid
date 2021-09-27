@@ -331,7 +331,8 @@
               alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
             >
           {%- else -%}
-            <span class="h2">{{ shop.name }}</span>
+            {% assign appendText = " | we're flippedout!" %}
+            <span class="h2">{{ shop.name | append: appendText }}</span>
           {%- endif -%}
         </a>
     {%- if request.page_type == 'index' -%}
